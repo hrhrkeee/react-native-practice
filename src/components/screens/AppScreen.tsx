@@ -5,6 +5,8 @@ import {
   SafeAreaView,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
+import { useNavigation } from "expo-router";
+import { DrawerActions } from "@react-navigation/native";
 
 type Props = PropsWithChildren<{
   title: string;
@@ -13,6 +15,7 @@ type Props = PropsWithChildren<{
 export function AppScreen({ title, children }: Props) {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["left", "right"]}>
@@ -24,7 +27,7 @@ export function AppScreen({ title, children }: Props) {
       >
         <Appbar.Action
           icon="menu"
-          onPress={() => console.log("Menu pressed")}
+          onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
         />
         <Appbar.Content title={title} />
         <Appbar.Action
