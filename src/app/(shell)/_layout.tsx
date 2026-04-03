@@ -1,5 +1,5 @@
-import { Drawer } from "expo-router/drawer";
 import { CustomDrawer } from "@/components/layout/CustomDrawer";
+import { Drawer } from "expo-router/drawer";
 
 export default function ShellLayout() {
   return (
@@ -7,6 +7,10 @@ export default function ShellLayout() {
       drawerContent={(props) => <CustomDrawer {...props} />}
       screenOptions={{
         headerShown: false,
+        drawerType: "front",
+        drawerStyle: {
+          width: "70%",
+        },
       }}
     />
   );

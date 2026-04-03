@@ -4,9 +4,10 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export function CustomDrawer(props: DrawerContentComponentProps) {
   const insets = useSafeAreaInsets();
-  
+
   return (
-    <PaperDrawer.Section style={{ paddingTop: insets.top }}>
+    <PaperDrawer.Section title="a" style={{ paddingTop: insets.top }}>
+      <PaperDrawer.Item label="テスト" />
       <PaperDrawer.Item
         label="Home"
         icon="home"
