@@ -1,7 +1,12 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { BottomNavigation } from "react-native-paper";
 
-export function CustomTabBar({ navigation, state, descriptors, insets }: BottomTabBarProps) {
+export function CustomTabBar({
+  navigation,
+  state,
+  descriptors,
+  insets,
+}: BottomTabBarProps) {
   return (
     <BottomNavigation.Bar
       navigationState={state}
@@ -30,8 +35,8 @@ export function CustomTabBar({ navigation, state, descriptors, insets }: BottomT
           options.tabBarLabel !== undefined
             ? options.tabBarLabel
             : options.title !== undefined
-            ? options.title
-            : route.name;
+              ? options.title
+              : route.name;
         return typeof label === "string" ? label : route.name;
       }}
     />
