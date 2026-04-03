@@ -1,17 +1,33 @@
-import { Text, View, StyleSheet } from "react-native";
+import { AppScreen } from "@/components/screens/AppScreen";
+import { useState } from "react";
+import { Button, Card, Text, TextInput } from "react-native-paper";
 
-export default function Index() {
+export default function HomePage() {
+  const [name, setName] = useState("");
+
   return (
-    <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
-    </View>
+    <AppScreen title="Home">
+      <Card>
+        <Card.Content>
+          <Text variant="headlineSmall">React Native Paper Base</Text>
+          <Text variant="bodyMedium" style={{ marginTop: 8 }}>
+            この画面を基準に、以後の画面も Paper
+            コンポーネント中心で増やします。
+          </Text>
+
+          <TextInput
+            mode="outlined"
+            label="Name"
+            value={name}
+            onChangeText={setName}
+            style={{ marginTop: 16 }}
+          />
+
+          <Button mode="contained" onPress={() => {}} style={{ marginTop: 16 }}>
+            Continue
+          </Button>
+        </Card.Content>
+      </Card>
+    </AppScreen>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
