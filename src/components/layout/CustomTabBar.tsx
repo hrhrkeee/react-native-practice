@@ -1,5 +1,6 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { BottomNavigation } from "react-native-paper";
+import { paperTheme } from "../../theme/paperTheme";
 
 export function CustomTabBar({
   navigation,
@@ -9,6 +10,13 @@ export function CustomTabBar({
 }: BottomTabBarProps) {
   return (
     <BottomNavigation.Bar
+      key={`tab-bar-${state.index}`}
+      style={{ backgroundColor: paperTheme.colors.primary }}
+      activeColor="#ffffff"
+      inactiveColor="#c0c0c0"
+      activeIndicatorStyle={{
+        backgroundColor: "#ffffff60",
+      }}
       navigationState={state}
       safeAreaInsets={insets}
       onTabPress={({ route, preventDefault }) => {

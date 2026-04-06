@@ -17,8 +17,9 @@ export default function HomePage() {
 
           <TextInput
             mode="outlined"
-            label="Name"
+            label="名前入力欄"
             value={name}
+            placeholder="ここに何かを入力してください"
             onChangeText={setName}
             style={{ marginTop: 16 }}
           />

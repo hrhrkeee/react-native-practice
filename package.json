@@ -5,7 +5,8 @@
   "scripts": {
     "start": "expo start",
     "lint": "expo lint",
-    "ios": "expo run:ios",
+    "ios:simulator": "expo run:ios",
+    "ios:physical": "expo run:ios --device 'iPhone 15 pro'",
     "android": "expo run:android",
     "web": "expo start --web"
   },
