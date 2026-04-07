@@ -1,3 +1,5 @@
+import { DrawerActions } from "@react-navigation/native";
+import { useNavigation } from "expo-router";
 import { PropsWithChildren } from "react";
 import { StyleSheet } from "react-native";
 import { Appbar, Surface, useTheme } from "react-native-paper";
@@ -5,8 +7,6 @@ import {
   SafeAreaView,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
-import { useNavigation } from "expo-router";
-import { DrawerActions } from "@react-navigation/native";
 
 type Props = PropsWithChildren<{
   title: string;

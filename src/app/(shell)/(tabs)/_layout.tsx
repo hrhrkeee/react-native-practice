@@ -37,6 +37,19 @@ export default function TabsLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="others"
+        options={{
+          title: "Others",
+          tabBarIcon: ({ color, size }) => (
+            <Icon
+              name="book-open-page-variant-outline"
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
