@@ -35,9 +35,7 @@ export function AppScreen({ title, children }: Props) {
           onPress={() => console.log("Settings pressed")}
         />
       </Appbar.Header>
-      <Surface style={[styles.content, { paddingBottom: 16 + insets.bottom }]}>
-        {children}
-      </Surface>
+      <Surface style={styles.content}>{children}</Surface>
     </SafeAreaView>
   );
 }
